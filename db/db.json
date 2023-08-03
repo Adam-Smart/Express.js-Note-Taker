@@ -1,1 +1,7 @@
-[]
+[
+    {
+        "title": "Example Note",
+        "text": "This is an example note. To add new notes first click the + in the top right. \n\nThen you can save using the save logo next to the +. \n\nYou can open the note by clicking on the note in the list on the left.\n\nYou can also delete a note by clicking the bin button in the notes list next to the note you want to remove.",
+        "id": "1230784e-6d5a-4efe-9ea6-518cf7072e70"
+    }
+]

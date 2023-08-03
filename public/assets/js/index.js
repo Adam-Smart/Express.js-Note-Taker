@@ -12,19 +12,19 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
-// Show an element
+//Used to show an element
 const show = (elem) => {
   elem.style.display = 'inline';
 };
 
-// Hide an element
+//Used to hide an element
 const hide = (elem) => {
   elem.style.display = 'none';
 };
 
-// activeNote is used to keep track of the note in the textarea
+// activeNote keeps track of the note in the textarea
 let activeNote = {};
-
+// gets the note from db 
 const getNotes = () =>
   fetch('/api/notes', {
     method: 'GET',
@@ -32,7 +32,7 @@ const getNotes = () =>
       'Content-Type': 'application/json',
     },
   });
-
+//saves the note to the db
 const saveNote = (note) =>
   fetch('/api/notes', {
     method: 'POST',
@@ -41,7 +41,7 @@ const saveNote = (note) =>
     },
     body: JSON.stringify(note),
   });
-
+//deletes the note from db
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
